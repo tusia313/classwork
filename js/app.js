@@ -1,22 +1,23 @@
 let round = 0
+let count = 0
+let punished = true
 
-while (round < 4) {
+loopPunishment: while (punished) {
+    round++
+    while (punished) {
+        count++
+        console.log(count + '. I will use camelCase, ' + round)
 
-    // for (let i = 0; i < 100; i++) {
-    //     console.log(i + 1 + ". " + "I will use camelCase.")
-    // }
+        if (round >= 4 && count >= 100) {
+            console.log("Eat my shorts!")
+            break loopPunishment
 
-    // console.log("Round " + round + " done!")
-    // round++
-
-
-        for (let i = 0; i < 100; i++) {
-            console.log(i + 1 + ". " + "I will use camelCase.")
+        } else if (count >= 100) {
+            console.log('Round done!')
+            count = 0
+            break
         }
-    
-        console.log("Round " + round + " done!")
-        round++
-
+    }
 }
 
 
