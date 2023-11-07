@@ -1,15 +1,22 @@
-let i = 0
+let round = 0
 
-// do {
-//     let number = i + 1
-//     console.log("I will indent my code, written by the " + number + " time" )
-//     i++
-// } while (i < 100)
+while (round < 4) {
 
-while (i < 100) {
-    let number = i + 1
-    console.log("I will indent my code, written by the " + number + " time")
-    i++
+    // for (let i = 0; i < 100; i++) {
+    //     console.log(i + 1 + ". " + "I will use camelCase.")
+    // }
+
+    // console.log("Round " + round + " done!")
+    // round++
+
+
+        for (let i = 0; i < 100; i++) {
+            console.log(i + 1 + ". " + "I will use camelCase.")
+        }
+    
+        console.log("Round " + round + " done!")
+        round++
+
 }
 
 
