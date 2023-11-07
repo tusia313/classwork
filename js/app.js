@@ -1,40 +1,28 @@
-let round = 0
-let count = 0
-let punished = true
 
-// loopPunishment: while (punished) {
-//     round++
-//     while (punished) {
-//         count++
-//         console.log(count + '. I will use camelCase, ' + round)
 
-//         if (round >= 4 && count >= 100) {
-//             console.log("Eat my shorts!")
-//             break loopPunishment
+// Fizz Buzz!
+// Print out 100 numbers. BUT if the number is divisible by 5
+// you have to replace it with 'buzz'. If the number is divisible by 3
+// you have to replace it with 'fizz'. And finally, if the number
+// is divisible by both 5 and 3 you have to replace it with 'fizz buzz'
 
-//         } else if (count >= 100) {
-//             console.log('Round done!')
-//             count = 0
-//             break
-//         }
-//     }
-// }
 
-while (round < 4) {
-    round++
-    for (count = 0; count < 100; count++) {
-        console.log(count + 1 + '. I will use camelCase', round)
+for (let number = 1; number < 101; number++) {
+
+    if (number % 5 === 0 && number % 3 === 0) {
+        console.log('fizz buzz')
+    } else if (number % 3 === 0) {
+        console.log('fizz')
+    } else if (number % 5 === 0) {
+        console.log('buzz')
     }
-
-    if (count === 100 && round === 4) {
-        console.log('Eat my shorts!')
+    else {
+        console.log(number)
     }
-
-    else if (count === 100) {
-        console.log('Round done')
-    }
-
+    
 }
+
+
 
 
 
