@@ -1,7 +1,10 @@
+let i = 0
 
-for (let i=0; i<100; i++) {
-console.log(i+1 +". " + "I will not cheat in the class")
-}
+do {
+    let number = i + 1
+    console.log("I will indent my code, written by the " + number + " time" )
+    i++
+} while (i < 100)
 
 
 
