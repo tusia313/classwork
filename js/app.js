@@ -1,12 +1,13 @@
 
-
-function dayPasses() {
-    const christmas = new Date("December 24, 2022")
-    const today = new Date()
-    return (today - christmas)/1000/60/60/24
+function friday() {
+    const today = new Date().getDay()
+    if (today === 5) {
+        console.log('Happy Friday!')
+    }
+    else { console.log('Not today.')}
 }
 
-console.log(dayPasses())
+console.log(friday())
 
 
 
