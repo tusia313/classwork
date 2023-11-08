@@ -1,12 +1,11 @@
 
+const randomInteger = () => Math.floor(Math.random() * 100) 
 
-const howManySeconds = hours =>  hours * 60 * 60 
+console.log(randomInteger())
 
-console.log(howManySeconds(1))
+const getCircus = radious => Math.PI * 2 * radious
 
-
-
-
+console.log(getCircus(4.5))
 
 
 
