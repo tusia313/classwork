@@ -1,13 +1,12 @@
+const netflix2022 = 210.32344
+const netflix2021 = 192.4392
 
-function friday() {
-    const today = new Date().getDay()
-    if (today === 5) {
-        console.log('Happy Friday!')
-    }
-    else { console.log('Not today.')}
+function seeTwoNumber () {
+    const total = netflix2022 + netflix2021
+    return Number(total.toFixed(2))
 }
 
-console.log(friday())
+console.log(seeTwoNumber())
 
 
 
