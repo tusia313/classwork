@@ -1,9 +1,2 @@
-function alertMe(e) {
-    console.log(e)
-}
-document.addEventListener('click', alertMe)
 
-
-
-
-
+const girlBand = ['Jisoo', 'Jennie', 'Rose', 'Lisa']
