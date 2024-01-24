@@ -1,3 +1,4 @@
+const sheep = document.querySelectorAll('.sheep')
 
-const girlBand = ['Jisoo', 'Jennie', 'Rose', 'Lisa']
-console.log(girlBand.length)
+    const numberOfSheep = sheep.length
+    console.log(numberOfSheep)
