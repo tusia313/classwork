@@ -6,5 +6,11 @@
 const farm = document.querySelector(".farm")
 const buttonElement = document.querySelector("button")
 const animals = ["🐷", "🐮", "🐴", "🐑"]
-farm.innerHTML = animals
+farm.innerHTML = animals.join(" ")
 const animal = "🐓"
+
+function addKogut() {
+    animals.push(animal)
+    farm.innerHTML = animals.join(" ")
+}
+buttonElement.addEventListener('click', addKogut)
