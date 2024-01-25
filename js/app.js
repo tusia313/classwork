@@ -6,3 +6,10 @@
 const fridge = document.querySelector(".fridge")
 const topShelf = document.querySelector("#top-shelf")
 const foodItems = ["🍉", "🍊", "🍇", "🍌", "🍍"]
+topShelf.innerHTML = foodItems
+
+function removeItem(){
+    foodItems.shift()
+    topShelf.innerHTML = foodItems
+}
+fridge.addEventListener('click', removeItem)
