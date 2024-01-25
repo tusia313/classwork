@@ -1,10 +1,10 @@
-
-// .sort() exercise
-// Sort the orders by ascending order and show them in the
-// order display.
-//Hint: Use sort(), querySelector(), .innerHTML
-const displayElement = document.querySelector(".display")
-const orders = [453, 124, 402, 99]
-
-orders.sort((a,b) => a - b)
-displayElement.innerHTML = orders.join(" ")
+// .push()
+// You are the owner of a farm and you have just acquired a new
+// farm animal 🐓! Add your farm animal to the pack by pressing on
+// the button.
+// Hint: use .querySelector() .push() .addEventListener()
+const farm = document.querySelector(".farm")
+const buttonElement = document.querySelector("button")
+const animals = ["🐷", "🐮", "🐴", "🐑"]
+farm.innerHTML = animals
+const animal = "🐓"
