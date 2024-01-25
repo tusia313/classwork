@@ -5,3 +5,6 @@
 //Hint: Use sort(), querySelector(), .innerHTML
 const displayElement = document.querySelector(".display")
 const orders = [453, 124, 402, 99]
+
+orders.sort((a,b) => a - b)
+displayElement.innerHTML = orders.join(" ")
