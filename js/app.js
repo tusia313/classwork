@@ -1,29 +1,28 @@
-// 1. Join these two arrays together and then sort the words by
-// longest to shortest.
-const primaryColors = ["red", "blue", "yellow"]
-const pastelColors = ["lilac", "beige", "azure"]
 
-const allColors = primaryColors.concat(pastelColors)
-console.log(allColors)
-console.log(allColors.sort((a,b) => b.length - a.length))
+// The .forEach() method executes code for every item in an array.
+// It will NOT create a new array or change the original array.
 
-// 2. Put the numbers in order and then add the missing ones.
-const count = [1, 0, 8, 10, 7, 3, 9, 2]
+// Can you turn all three Pac-men to look left, if we press the
+// 'ArrowLeft' button, and turn all three Pac-men to look right
+// if we press the 'ArrowRight' button?
+// Hint: use .querySelectorAll() e.key .style .addEventListener()
 
-console.log(count.sort((a,b) => a - b))
-count.splice(4, 0, 4, 5, 6)
-console.log(count)
+const packMans = document.querySelectorAll('.pac-man')
 
-// 3. Make a sentence out of this array without the last word.
-const words = ["The", "cat", "jumped", "over", "the", "moon", "if"]
-
-words.pop()
-console.log(words.join(' '))
-
-
-// 4. Sort these items in order and remove the odd one out.
-const years = ["bed", 1990, 1734, 2022, 1634]
-
-console.log(years.sort((a,b) => a -b))
-console.log(years.splice(0, 1))
-console.log(years)
+function movePackman(e) {
+    const key = e.key
+    console.log(key)
+    if (key === 'ArrowLeft') {
+        packMans.forEach(packMan => {
+            packMan.style.transform = 'rotateY(180deg)'
+            packMan.style.left = '20px'
+        })
+    }
+    if (key === 'ArrowRight') {
+        packMans.forEach(packMan => {
+            packMan.style.transform = 'rotateY(0deg)'
+            packMan.style.right = '20px'
+        })
+    }
+}
+document.addEventListener('keydown', movePackman)
