@@ -1,28 +1,14 @@
+const vintedBrands = ['Zara', 'Topshop', 'Balagan', 'Bohemia Souls']
 
-// The .forEach() method executes code for every item in an array.
-// It will NOT create a new array or change the original array.
+const serachedBrand = vintedBrands.some(vintedBrand => vintedBrand === 'Balagan')
+console.log(serachedBrand)
 
-// Can you turn all three Pac-men to look left, if we press the
-// 'ArrowLeft' button, and turn all three Pac-men to look right
-// if we press the 'ArrowRight' button?
-// Hint: use .querySelectorAll() e.key .style .addEventListener()
+const zaraDress = ['long dress', 'long dress', 'long dress']
+const newDress = zaraDress.map(dress => dress === 'dress with white tail')
+console.log(newDress)
 
-const packMans = document.querySelectorAll('.pac-man')
+const gameTotals = ['110', '23', '67']
 
-function movePackman(e) {
-    const key = e.key
-    console.log(key)
-    if (key === 'ArrowLeft') {
-        packMans.forEach(packMan => {
-            packMan.style.transform = 'rotateY(180deg)'
-            packMan.style.left = '20px'
-        })
-    }
-    if (key === 'ArrowRight') {
-        packMans.forEach(packMan => {
-            packMan.style.transform = 'rotateY(0deg)'
-            packMan.style.right = '20px'
-        })
-    }
-}
-document.addEventListener('keydown', movePackman)
+
+
+console.log('hello vscCode')
