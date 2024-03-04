@@ -13,6 +13,12 @@ console.log(getCelsius(degrees))
 // 2. Using '.join()' and 'length' write a function that will return
 // the total number of characters in an array of strings.
 // eg: getTotal(['Mirror', 'Balloon', 'Ox']) returns 15
+const words = ['Mirror', 'Balloon', 'Ox']
+function getNumber() {
+  const newWord = words.join('').length
+  return newWord
+}
+console.log(getNumber(words))
 
 // 3. Using '.some()' write a function that will check an array
 // for falsy values.
