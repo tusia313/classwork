@@ -23,8 +23,22 @@ console.log(getNumber(words))
 // 3. Using '.some()' write a function that will check an array
 // for falsy values.
 // eg: checkForFalsy([null, 0, [], -3]) returns true
+const values = [null, 0, [], -3]
+function getTrue() {
+
+  return values.some(value => value = true)
+}
+console.log(getTrue())
 
 // 4. Using '.split()', '.filter()', '.includes' and '.length()'
 // write a function that will tell you how many vowels there are
 // in a sentence.
 // eg: vowelCount('I am a little sausage') returns 9.
+const sentence ='I am a little sausage'
+
+function howMany() {
+  const volwes = ['a', 'e', 'i', 'o', 'u', 'y']
+  const letters = sentence.toLowerCase().split('')
+  return letters.filter(letter => volwes.includes(letter)).length
+}
+console.log(howMany())
