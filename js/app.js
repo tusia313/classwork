@@ -1,9 +1,27 @@
-const text = document.querySelector('h1')
+// setInterval() exercise
+// Make a countdown timer that will show you the time every
+// 1000ms, and stop when we hit zero OR press the button.
+const counter = document.querySelector('h1')
+const button = document.querySelector('button')
 
 
-function showText() {
-  setTimeout(() => {
-    text.innerText = "Boo!"
-  }, 5000)
+let counting = 10
+counter.innerText = counting
+let timeId
+
+function startCounting() {
+  if (counting > 0) {
+    counting--
+    counter.innerText = counting
+  } 
+  else {
+    clearInterval(timeId)
+  }
 }
-document.addEventListener('click', showText)
+function stopCounting() {
+  clearInterval(timeId)
+}
+
+timeId = setInterval(startCounting, 1000)
+button.addEventListener('click', stopCounting)
+
