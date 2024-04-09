@@ -1,14 +1,8 @@
-const selectDrop = document.querySelector('#flavor-select')
-const submitDrop = document.querySelector('input[type=submit]')
+const containerElement = document.querySelector("#container")
+const imageElement = document.createElement("img")
 
-console.log(selectDrop)
-console.log(submitDrop)
+imageElement.setAttribute('src','https://storage.googleapis.com/pod_public/1300/151089.jpg')
+imageElement.setAttribute('alt', 'Picture of a cat')
+imageElement.setAttribute('width', '10rem')
 
-
-
-function handleClick(e) {
-  e.preventDefault()
-  console.log(selectDrop.value)
-}
-
-submitDrop.addEventListener('click', handleClick)
+containerElement.append(imageElement)
