@@ -1,4 +1,4 @@
-// GET HTTP request method
+// POST HTTP request method
 const data = {
     name: 'Martha Beskid Burger'
 }
