@@ -1,38 +1,5 @@
-// POST HTTP request method
-// const data = {
-//     name: 'Martha Beskid Burger'
-// }
-// fetch('https://my-burger-api.herokuapp.com/burgers', {
-//     method: 'POST',
-//     headers: {
-//         'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(data)
-// })
-//     .then(response => response.json())
-//     .then(data => console.log(data))
+const print = async () => 'I have beend printed'
 
-// PUT http request
-// const data = {
-//     name: 'Martha Beskid Burger',
-//     restaurant: 'Poland',
-//     ingredients: ['becon', 'corn', 'onion']
-// }
-// fetch('https://my-burger-api.herokuapp.com/burgers/28', {
-//     method: 'PUT',
-//     headers: {
-//         'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(data)
-// })
-//     .then(response => response.json())
-//     .then(data => console.log(data))
-//     .catch(error => console.error(error))
+print().then(response => console.log(response))
 
-// Delete !
-
-fetch('https://my-burger-api.herokuapp.com/burgers/28', {
-    method: 'DELETE'
-})
-    .then(response => response.json())
-    .then(data => console.log(data))
+// fetch('https://restcountries.com/v3.1/all')
