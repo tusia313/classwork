@@ -4,10 +4,23 @@
 
 // fetch('https://restcountries.com/v3.1/all')
 
-async function getData() {
-    const response = await fetch('https://restcountries.com/v3.1/all')
-    const data = await response.json()
-    console.log(data)
+// const response = await fetch('https://restcountries.com/v3.1/all')
+// const data = await response.json()
+// console.log(data)
+
+async function fetchData() {
+    try {
+        const response = await fetch('https://restcountries.com/v3.1/all')
+        const data = await response.json()
+        console.log(data)
+    }
+
+    catch (error) {
+        console.error(error)
+    }
 }
 
-getData()
+fetchData()
+
+
+
