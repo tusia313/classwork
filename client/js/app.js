@@ -11,8 +11,11 @@
 async function fetchData() {
     try {
         const response = await fetch('https://restcountries.com/v3.1/all')
-        const data = await response.json()
-        console.log(data)
+        if (response.status === 200) {
+            const data = await response.json()
+            console.log(data)
+        }
+       else console.log('error fetching data')
     }
 
     catch (error) {
