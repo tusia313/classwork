@@ -6,4 +6,8 @@ app.get('/', (req, res) => {
     res.send('hello world !!!')
 })
 
+app.get('/users', (req, res) => {
+    res.send('all my users')
+})
+
 app.listen(PORT, () => console.log('listening out to port ' + PORT))
