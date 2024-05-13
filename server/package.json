@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tusia313/classwork/issues"
   },
-  "homepage": "https://github.com/tusia313/classwork#readme"
+  "homepage": "https://github.com/tusia313/classwork#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
