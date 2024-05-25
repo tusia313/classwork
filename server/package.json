@@ -19,6 +19,7 @@
   "homepage": "https://github.com/tusia313/classwork#readme",
   "dependencies": {
     "@datastax/astra-db-ts": "^1.1.0",
+    "axios": "^1.7.2",
     "express": "^4.19.2",
     "nodemon": "^3.1.0"
   }
