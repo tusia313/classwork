@@ -20,6 +20,7 @@
   "dependencies": {
     "@datastax/astra-db-ts": "^1.1.0",
     "axios": "^1.7.2",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "nodemon": "^3.1.0"
   }
