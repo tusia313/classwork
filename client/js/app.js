@@ -1,29 +1,31 @@
-// const print = async () => 'I have beend printed'
+const documentIdInput = document.querySelector('#document-id')
+const firstInput = document.querySelector('#firstName')
+const secondInput = document.querySelector('#lastName')
+const submitButton = document.querySelector('#update-data')
 
-// print().then(response => console.log(response))
-
-// fetch('https://restcountries.com/v3.1/all')
-
-// const response = await fetch('https://restcountries.com/v3.1/all')
-// const data = await response.json()
-// console.log(data)
-
-async function fetchData() {
-    try {
-        const response = await fetch('https://restcountries.com/v3.1/all')
-        if (response.status === 200) {
-            const data = await response.json()
-            console.log(data)
+app.put("/users/:documentID", async(req, res => {
+    const id = req.params.documentID
+    console.log(id)
+    const { firstName, lastName } = req.body
+    console.log(firstName, lastName)
+    options = {
+        method: "PUT",
+        headers: {
+            "X-Cassandra-Token": token,
+            accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        data: {
+            firstName, lastName
         }
-       else console.log('error fetching data')
+    }
+    try {
+        const response = await axios(`${url}/${id}`, options)
+        console.log(response)
+    } catch (error) {
+        console.err(err)
     }
 
-    catch (error) {
-        console.error(error)
-    }
-}
 
-fetchData()
-
-
+}))
 
