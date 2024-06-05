@@ -4,7 +4,8 @@ const app = express()
 const axios = require('axios')
 const cors = require('cors')
 
-
+//middleware
+app.use(cors())
 
 app.delete("/users/:documentID", async (req,res) => {
     const id = req.params.documentID
