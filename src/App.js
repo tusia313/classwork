@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useRef } from 'react'
 function App() {
+
+  const ref = useRef(null)
+
+  console.log(ref)
+
+  const handleScroll = (currentRef) => {
+    console.log('current ref: ', currentRef)
+    window.scrollTo({
+      top: currentRef.offsetTop,
+      behavior: "smooth"
+    })
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick = {() => handleScroll(ref.current)}>scroll to plum card</button>
+      <div className="spacer"></div>
+      <div className="card" ref={ref}></div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
