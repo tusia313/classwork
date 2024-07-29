@@ -1,10 +1,11 @@
 import { useRef } from 'react'
-function App() {
+import Card from './components/Card'
 
+const App = () => {
+// inicjalizacja useref
   const ref = useRef(null)
 
-  console.log(ref)
-
+  // napisanie funkcji ograniajacej scrollowanie
   const handleScroll = (currentRef) => {
     console.log('current ref: ', currentRef)
     window.scrollTo({
@@ -16,7 +17,8 @@ function App() {
     <div>
       <button onClick = {() => handleScroll(ref.current)}>scroll to plum card</button>
       <div className="spacer"></div>
-      <div className="card" ref={ref}></div>
+      {/* dodanie ref do componentu */}
+      <Card ref={ref} />
     </div>
   )
 }
