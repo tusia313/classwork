@@ -5,11 +5,11 @@ body {
   margin: auto;
 }
 
-.spacer {
-  height: 700px;
+.parent {
+  padding: 20px;
+  background-color: lightgreen;
 }
-.card {
-  height: 400px;
-  width: 400px;
+.child{
+  padding: 20px;
   background-color: plum;
 }
