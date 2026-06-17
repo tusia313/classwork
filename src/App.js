@@ -1,9 +1,7 @@
-import Parent from './components/Parent'
+
 const App = () => {
   return (
-    <div>
-     <Parent/>
-    </div>
+    <div></div>
   )
 }
 export default App
