@@ -1,29 +1,33 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-// Change these functions into generic functions by altering the
-// type signatures. There should be no `unknown` types when you are done
-function randomFromList<T>(list: T[]): T {
-  const length = list.length;
-  const index = Math.floor(Math.random() * length);
-  return list[index];
-}
-function duplicateList<T>(list: T[], count: number = 1) {
-  let output: T[] = [];
-  for (let i = 0; i < count; i++) {
-    output = output.concat(list);
-  }
-  return output;
-}
-function createTuple<T, K>(item1: T, item2: K) {
-  return [item1, item2];
+interface OvenReady {
+  bakeTime: number;
+  temp: number;
 }
 
-// Use the following interface to constrain the generic in the next function
-interface Length {
-  length: number;
+// TWOJE ZADANIE:
+// 1. Zmień funkcję na generyczną (dodaj literkę T).
+// 2. Użyj słówka 'extends', aby "bramkarz" wpuszczał tylko typy zgodne z OvenReady.
+// 3. Podmień 'unknown' na swój generyczny typ.
+
+function putInOven<T extends OvenReady>(item: T) {
+  console.log(`Nagrzewam do ${item.temp}°C. Pieczemy przez ${item.bakeTime} min.`);
+  return item;
 }
-function getLength<T extends Length>(item: T): number {
-  return item.length;
-}
 
+// --- TESTY ---
 
+const jagodzianka = { 
+  name: "Jagodzianka z kruszonką", 
+  bakeTime: 25, 
+  temp: 180 
+};
 
+const wagaKuchenna = { 
+  brand: "Zelmer", 
+  batteryLevel: 80 
+};
+
+// Pierwsze wywołanie powinno przejść gładko:
+putInOven(jagodzianka); 
+
+// Drugie wywołanie powinno podświetlić się na czerwono (wagi nie wkładamy do pieca!):
+putInOven(wagaKuchenna);
