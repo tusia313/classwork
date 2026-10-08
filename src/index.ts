@@ -1,33 +1,11 @@
-interface OvenReady {
-  bakeTime: number;
-  temp: number;
+interface User {
+  name: string;
 }
 
-// TWOJE ZADANIE:
-// 1. Zmień funkcję na generyczną (dodaj literkę T).
-// 2. Użyj słówka 'extends', aby "bramkarz" wpuszczał tylko typy zgodne z OvenReady.
-// 3. Podmień 'unknown' na swój generyczny typ.
-
-function putInOven<T extends OvenReady>(item: T) {
-  console.log(`Nagrzewam do ${item.temp}°C. Pieczemy przez ${item.bakeTime} min.`);
-  return item;
+// Gdzieś indziej w kodzie dorzucasz to samo:
+interface User {
+  age: number;
 }
 
-// --- TESTY ---
-
-const jagodzianka = { 
-  name: "Jagodzianka z kruszonką", 
-  bakeTime: 25, 
-  temp: 180 
-};
-
-const wagaKuchenna = { 
-  brand: "Zelmer", 
-  batteryLevel: 80 
-};
-
-// Pierwsze wywołanie powinno przejść gładko:
-putInOven(jagodzianka); 
-
-// Drugie wywołanie powinno podświetlić się na czerwono (wagi nie wkładamy do pieca!):
-putInOven(wagaKuchenna);
+// Wynik: TypeScript traktuje to jako jeden połączony obiekt:
+// { name: string; age: number; }
