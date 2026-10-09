@@ -1,11 +1,6 @@
-interface User {
-  name: string;
-}
+import type { Fruit } from "./fruitBasket.ts";
 
-// Gdzieś indziej w kodzie dorzucasz to samo:
-interface User {
-  age: number;
-}
+let basket: Fruit;   // Działa! (użycie jako typ)
+new Fruit();         // BŁĄD! (użycie jako wartość wykonawcza w runtime)
 
-// Wynik: TypeScript traktuje to jako jeden połączony obiekt:
-// { name: string; age: number; }
+
